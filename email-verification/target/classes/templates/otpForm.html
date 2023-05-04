@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Email Verification</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        button[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+	<div class="container text-center">
+		<h1 class="mb-4">Enter the OTP sent to your Email</h1>
+	    <form method="post" action="/verifyOTP">
+	        <div class="mb-3">
+	            <input type="text" id="otp" name="otp" class="form-control" placeholder="Enter OTP" required>
+	        </div>
+	        <input type="hidden" id="email" name="email" th:value="${email}">
+	        <button type="submit" class="btn btn-primary">Verify</button>
+	    </form>
+	    <!-- Bootstrap JavaScript -->
+	    <script src="/webjars/bootstrap/5.1.0/js/bootstrap.min.js"></script>
+	</div>
+	
+</body>
+</html>

@@ -1,0 +1,20 @@
+server:
+  port: 8080 
+
+spring:
+  thymeleaf:
+    prefix: classpath:/templates/ 
+    suffix: .html 
+  mail:
+    host: smtp.gmail.com # Set the SMTP host for sending emails
+    port: 587 # Set the SMTP port for sending emails
+    username:  # Set the username of the email account to be used for sending emails
+    password:  # Set the password of the email account to be used for sending emails
+    protocol: smtp 
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
